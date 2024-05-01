@@ -33,3 +33,16 @@ Route::get('/', function () {
 //});
 //
 //Route::get('checkout', []);
+//Route::get('orders/{vendorOrderID}')
+
+Route::middleware('auth')->group(function () {
+    Route::prefix('wishlist')->name('wishlist.')->group(function () {
+
+    });
+
+    Route::get('invoices/{order}', \App\Http\Controllers\InvoicesController::class);
+});
+
+//Route::name('callbacks.')->prefix('callbacks')->group(function () {
+//
+//})
