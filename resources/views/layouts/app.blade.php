@@ -36,11 +36,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        <li class="nav-item">
-{{--                            <a class="nav-link position-relative" style="font-" href="{{ route('cart.index') }}">--}}
-
-{{--                            </a>--}}
-                        </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
