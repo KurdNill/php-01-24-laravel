@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Callbacks\GoogleAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,14 @@ Route::middleware('auth')->group(function () {
 //Route::name('callbacks.')->prefix('callbacks')->group(function () {
 //
 //})
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('notify-admin', function() {
+
+});
+
+Route::get('google/redirect', [GoogleAuthController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('google/callback', [GoogleAuthController::class, 'handleGoogleCallback'])->name('google.callback');
