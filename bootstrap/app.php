@@ -11,6 +11,9 @@
 |
 */
 
+/*
+ * Тут створюється додаток з контейнерами.
+ */
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
@@ -26,6 +29,10 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+/*
+ * Тут реєструються singleton-класи, які відповідають за підняття фреймворку (можливо, Денис тут під фреймворком має на
+ * увазі app/Http/Kernel.php, app/Console/Kernel.php і app/Exceptions/Handler.php).
+ */
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class

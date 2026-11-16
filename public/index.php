@@ -3,6 +3,9 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
+/*
+ * Тут встановлюється константа LARAVEL_START.
+ */
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -16,6 +19,9 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
+/*
+ * Тут підтягуються maintenance'и.
+ */
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
     require $maintenance;
 }
@@ -31,6 +37,9 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
+/*
+ * Тут запускається Composer.
+ */
 require __DIR__.'/../vendor/autoload.php';
 
 /*
@@ -44,12 +53,24 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
+/*
+ * Тут запускається bootstrap/app.php.
+ */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+/*
+ * Тут запускається Kernel.
+ */
 $kernel = $app->make(Kernel::class);
 
+/*
+ * Тут отримується Request.
+ */
 $response = $kernel->handle(
     $request = Request::capture()
 )->send();
 
+/*
+ * Тут Request відпрацьовує.
+ */
 $kernel->terminate($request, $response);

@@ -18,17 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/', function () {
-//    return view('welcome');
-//})->middleware(['auth']);
-//або middleware(['app/Http/Middleware/Authenticate']);
 
-//Route::get('users/{user}', [\App\Http\Controllers\Controller::class, 'show']);
+Auth::routes();
 
-//Auth::routes();
-//
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 //Route::name('cart.')->prefix('cart')->group(function() {
 //    Route::get('/', [\App\Http\Controllers\CartController::class, ]);
 //});
@@ -48,9 +42,6 @@ Route::middleware('auth')->group(function () {
 //
 //})
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('notify-admin', function() {
 
