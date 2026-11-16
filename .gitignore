@@ -20,13 +20,14 @@ yarn-error.log
 
 app/Broadcasting
 app/Console/Commands
-app/Enums
+app/Enums/Permissions
+app/Enums/OrderStatusEnum.php
+app/Enums/TransactionStatus.php
 app/Events/Admin
 app/Events/Users
 app/Http/Controllers/Admin
 app/Http/Controllers/Ajax
 app/Http/Controllers/Api
-app/Http/Controllers/Auth
 app/Http/Controllers/Callbacks
 app/Http/Controllers/CartController.php
 app/Http/Controllers/CategoriesController.php
@@ -45,7 +46,6 @@ app/Repositories
 app/Services
 config/paypal.php
 config/reverb.php
-database/migrations/2014_10_12_100000_create_password_resets_table.php
 database/migrations/2024_04_08_162724_create_order_statuses_table.php
 database/migrations/2024_04_08_162808_create_orders_table.php
 database/migrations/2024_04_08_162905_create_order_product_table.php
@@ -53,18 +53,15 @@ database/migrations/2024_05_23_171452_create_weekly_discount_table.php
 database/migrations/2024_05_27_174226_change_columns_in_users_table.php
 database/seeders/UserSeeder.php
 docker
-resources/sass
 resources/scss
 resources/js/admin
 resources/js/payment
 resources/views/admin
-resources/views/auth
 resources/views/cart
 resources/views/checkout
 resources/views/layouts/admin.blade.php
 resources/views/payments
 resources/views/products
-resources/views/home.blade.php
 routes/versions
 tests/Feature/Admin
 tests/Unit/Services

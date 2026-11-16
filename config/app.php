@@ -83,6 +83,9 @@ return [
     |
     */
 
+    /*
+     * Поточна локалізація.
+     */
     'locale' => 'en',
 
     /*
@@ -122,6 +125,9 @@ return [
     |
     */
 
+    /*
+     * Ключ додатка.
+     */
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
@@ -168,6 +174,7 @@ return [
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class
     ])->toArray(),
 
     /*

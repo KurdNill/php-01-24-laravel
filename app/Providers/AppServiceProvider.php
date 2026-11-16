@@ -6,19 +6,14 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    //    public array $bindings = [
-    //        FileStorageServiceContract::class => FileStorageService::class,
-    //
-    //    ];
+    public array $bindings = [
+    ];
 
     /**
      * Register any application services.
      */
     public function register(): void
     {
-        //якщо я хочу клас-одинак:
-        //$this->app->singleton(\App\Models\UserInterface, \App\Models\User);
-        //        $this->app->when()
     }
 
     /**

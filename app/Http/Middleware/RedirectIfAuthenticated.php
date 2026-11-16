@@ -26,9 +26,5 @@ class RedirectIfAuthenticated
         }
 
         return $next($request);
-        //подвійний middleware:
-        //$response = $next($request);
-        //logs()->info($response);
-        //return $response;
     }
 }
